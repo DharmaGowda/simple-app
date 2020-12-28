@@ -29,7 +29,9 @@ pipeline {
                         protocol: 'http', 
                         repository: 'simple-app-release', 
                         version: "${mavenPom.version}"
+
                 }
+                
             }
         }
     }
