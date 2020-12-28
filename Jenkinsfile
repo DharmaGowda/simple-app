@@ -17,7 +17,7 @@ pipeline {
                     [
                         artifactId: 'simple-app', 
                         classifier: '', 
-                        file: "target/simple-app-${readMavenPom.version}.war", 
+                        file: "target/simple-app-${mavenPom.version}.war", 
                         type: 'war'
                     ]
                 ], 
@@ -27,7 +27,7 @@ pipeline {
                         nexusVersion: 'nexus3', 
                         protocol: 'http', 
                         repository: 'simple-app-release', 
-                        version: "${readMavenPom.version}"
+                        version: "${mavenPom.version}"
             }
         }
     }
