@@ -29,6 +29,7 @@ pipeline {
                         nexusVersion: 'nexus3', 
                         protocol: 'http', 
                         repository: "${nexusVersion}", 
+                        repository: 'simple-app-release', 
                         version: "${mavenPom.version}"
 
                 }
